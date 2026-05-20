@@ -6,7 +6,12 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useLeadProfile } from "@/src/lib/lead-context";
 import { LeadSummaryCard } from "@/src/components/lead-summary-card";
-import { PdfEmbed } from "@/src/components/pdf-embed";
+import dynamic from "next/dynamic";
+
+const PdfEmbed = dynamic(() => import("@/src/components/pdf-embed").then((m) => m.PdfEmbed), {
+  ssr: false,
+  loading: () => <p className="p-6 text-sm text-gray-400 animate-pulse">Rendering PDF…</p>,
+});
 import { Toast, type ToastState } from "@/src/components/toast";
 import type { ExtractedQuestion, GeneratedPdf, PdfSection } from "@/src/lib/types";
 
