@@ -1,0 +1,125 @@
+{
+  "company": {
+    "name": "NovaCamp",
+    "tagline": "Build products, not just skills",
+    "description": "An intensive product-focused learning platform for engineers and aspiring PMs who want to build, ship, and lead real products. Not a lecture series. A structured builder environment."
+  },
+  "programs": {
+    "product_engineering": {
+      "name": "NovaCamp Product Engineering",
+      "tagline": "12-month program for engineers who want to build products end-to-end",
+      "duration": "12 months (3 tracks: Foundation, Builder, Advanced)",
+      "fee": "~3L INR",
+      "target": "Software engineers with 0-7 YoE who want to move from task execution to product ownership",
+      "core_modules": [
+        "Product Thinking for Engineers",
+        "System Design (HLD + LLD)",
+        "Full-Stack Product Development",
+        "AI-Native Product Building (RAG, Agents, Evals)",
+        "Data-Informed Decision Making",
+        "Shipping & Iteration: from MVP to Scale"
+      ],
+      "key_differentiators": [
+        "Every module ends with a shipped artifact, not an exam",
+        "Live sessions with instructors who've built products at scale",
+        "1:1 mentorship from engineers and PMs at top product companies",
+        "Cohort-based with peer reviews and team shipping sprints",
+        "AI integrated into every module as a building tool, not a topic",
+        "Curriculum updates continuously at no extra cost"
+      ],
+      "specializations": ["Full-Stack Product Dev", "AI Product Building", "Platform Engineering"]
+    },
+    "product_management": {
+      "name": "NovaCamp Product Management",
+      "tagline": "For builders who want to lead what gets built",
+      "duration": "9 months",
+      "fee": "~2.5L INR",
+      "target": "Engineers, analysts, and operators transitioning into PM roles at product companies",
+      "core_modules": [
+        "Product Discovery & User Research",
+        "Prioritization Frameworks in Practice",
+        "PRDs, Specs, and Shipping Cadence",
+        "Data & Experimentation for PMs",
+        "AI Product Strategy",
+        "Cross-Functional Leadership"
+      ],
+      "key_differentiators": [
+        "Every module built around real case studies from Indian product companies",
+        "Instructors are PMs and CPOs from top startups and FAANG",
+        "Portfolio of 6+ shipped case studies by graduation",
+        "Mock PM interviews with hiring managers",
+        "No slides-only learning. You build prototypes, run experiments, write specs."
+      ]
+    },
+    "ai_builder": {
+      "name": "NovaCamp AI Builder",
+      "tagline": "Ship production AI systems, not just notebooks",
+      "duration": "6 months (intensive)",
+      "fee": "~2L INR",
+      "target": "Engineers who want applied AI depth: RAG, agents, evals, production LLMs",
+      "covers": ["RAG pipelines", "Agent architectures", "Eval frameworks", "Production LLM deployment", "AI system design", "Prompt engineering at scale"],
+      "key_differentiator": "100% project-based. No theory modules. Every week you ship something that works."
+    }
+  },
+  "placement_outcomes": {
+    "source": "Independent placement assessment by third-party audit firm",
+    "placement_rate": "88% of eligible graduates placed within 6 months",
+    "median_salary_hike": "140%",
+    "median_post_program_salary": "22 LPA",
+    "top_25_percent_avg": "42 LPA",
+    "middle_80_percent_avg": "24 LPA",
+    "highest_offer": "1.2 Cr (international)",
+    "top_employers": ["Amazon", "Microsoft", "Flipkart", "Razorpay", "PhonePe", "Atlassian", "Google", "Swiggy", "CRED", "Zerodha"],
+    "total_hiring_partners": "300+",
+    "alumni_network": "50,000+",
+    "typical_service_to_product_jump": "From 6-14 LPA service roles to 20-30+ LPA product company roles within 6-12 months",
+    "placement_support_includes": ["Mock interviews with industry mentors", "Resume and portfolio curation", "Referral network across 300+ companies", "Hiring drives and placement sprints", "Support continues 12 months post-graduation"]
+  },
+  "financing": {
+    "no_cost_emi": "Available up to 12 months through NBFC partners",
+    "longer_emi": "24 and 36 month options available",
+    "down_payment": "As low as 30,000 INR",
+    "monthly_emi_with_scholarship": "As low as ~8,500/month with scholarship",
+    "scholarship": "Up to 30,000 INR based on entrance assessment performance",
+    "refund_policy": "14-day full refund window from first session",
+    "pause_option": "Up to 3 months course pause available"
+  },
+  "instructors": {
+    "background": "Engineers and PMs from Google, Flipkart, Razorpay, PhonePe, Microsoft, Atlassian, and high-growth Indian startups",
+    "key_point": "Every instructor has shipped products used by millions. Teaching is a choice, not a fallback.",
+    "format": "Live sessions with real-time doubt resolution. No pre-recorded lectures as primary content."
+  },
+  "entrance_assessment": {
+    "format": "30-minute online assessment",
+    "purpose": "Track placement (Foundation/Builder/Advanced) and scholarship eligibility",
+    "difficulty": "Calibrated to assess current level, not to filter out. Beginners are expected to clear it.",
+    "scholarship_link": "Performance determines scholarship amount (up to 30K off program fee)"
+  },
+  "vs_free_alternatives": {
+    "differentiators": [
+      "Live sessions with real-time feedback vs pre-recorded content with 4% completion rates",
+      "1:1 mentorship from industry practitioners vs self-study",
+      "Placement infrastructure (referrals, mock interviews, hiring drives) vs no career services",
+      "Cohort accountability and peer reviews vs isolated learning",
+      "Portfolio of shipped projects graded by mentors vs certificates",
+      "Curriculum updated continuously vs static course content"
+    ]
+  },
+  "alumni_stories": {
+    "service_to_product": {
+      "pattern": "Engineers from TCS, Infosys, Wipro, Cognizant moving to Amazon, Flipkart, Google, Razorpay",
+      "typical_hike": "2x to 4x salary",
+      "timeline": "Within 6-12 months of program completion"
+    },
+    "career_switcher": {
+      "pattern": "Non-CS backgrounds (commerce, mechanical, electrical) transitioning into product engineering and PM roles",
+      "key_factor": "Structured project portfolio + mock interview prep + referral network"
+    }
+  },
+  "important_caveats": {
+    "no_job_guarantee": "NovaCamp provides placement assistance, not a guaranteed job. Outcomes depend on effort, market conditions, and role availability.",
+    "time_commitment": "10-12 hours per week minimum. This is intensive.",
+    "eligibility_for_support": "Placement support requires completing mandatory modules and projects.",
+    "not_for_everyone": "If you cannot commit consistent time, wait until you can. We would rather you join when ready than struggle through."
+  }
+}

@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     return new Response(new Uint8Array(buffer), {
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Disposition": 'inline; filename="scaler-roadmap.pdf"',
+        "Content-Disposition": 'inline; filename="novacamp-roadmap.pdf"',
         "X-PDF-Id": id,
       },
     });

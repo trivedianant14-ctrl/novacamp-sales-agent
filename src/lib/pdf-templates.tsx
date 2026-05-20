@@ -67,7 +67,7 @@ function SkepticalSwitcherPdf({ data }: { data: GeneratedPdf }) {
     <Document>
       <Page size="A4" style={ssStyles.page}>
         <View style={ssStyles.header}>
-          <Text style={ssStyles.headerBrand}>SCALER</Text>
+          <Text style={ssStyles.headerBrand}>NOVACAMP</Text>
           <Text style={ssStyles.headerHeadline}>{data.headline}</Text>
         </View>
 
@@ -82,7 +82,7 @@ function SkepticalSwitcherPdf({ data }: { data: GeneratedPdf }) {
         </View>
 
         <View style={ssStyles.footer} fixed>
-          <Text style={ssStyles.footerText}>Data sourced from audited reports</Text>
+          <Text style={ssStyles.footerText}>NovaCamp · Data sourced from audited reports</Text>
           <Text style={ssStyles.pageNumber} render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
         </View>
       </Page>
@@ -156,7 +156,7 @@ function SeniorValidatorPdf({ data }: { data: GeneratedPdf }) {
   return (
     <Document>
       <Page size="A4" style={svStyles.page}>
-        <Text style={svStyles.headerBrand}>SCALER</Text>
+        <Text style={svStyles.headerBrand}>NOVACAMP</Text>
         <Text style={svStyles.headerHeadline}>{data.headline}</Text>
         <View style={svStyles.headerRule} />
         <Text style={svStyles.greeting}>{data.greeting}</Text>
@@ -169,7 +169,7 @@ function SeniorValidatorPdf({ data }: { data: GeneratedPdf }) {
         </View>
 
         <View style={svStyles.footer} fixed>
-          <Text style={svStyles.footerText}>For detailed module breakdown, contact your program advisor</Text>
+          <Text style={svStyles.footerText}>NovaCamp · For detailed module breakdown, contact your program advisor</Text>
           <Text style={svStyles.pageNumber} render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
         </View>
       </Page>
@@ -241,7 +241,7 @@ function AnxiousAspirer({ data }: { data: GeneratedPdf }) {
     <Document>
       <Page size="A4" style={aaStyles.page}>
         <View style={aaStyles.header}>
-          <Text style={aaStyles.headerBrand}>SCALER</Text>
+          <Text style={aaStyles.headerBrand}>NOVACAMP</Text>
           <Text style={aaStyles.headerHeadline}>{data.headline}</Text>
         </View>
 
@@ -256,7 +256,7 @@ function AnxiousAspirer({ data }: { data: GeneratedPdf }) {
         </View>
 
         <View style={aaStyles.footer} fixed>
-          <Text style={aaStyles.footerText}>Questions? Your advisor is here to help. No pressure, no timeline.</Text>
+          <Text style={aaStyles.footerText}>NovaCamp · Questions? Your advisor is here to help. No pressure, no timeline.</Text>
           <Text style={aaStyles.pageNumber} render={({ pageNumber, totalPages }) => `Page ${pageNumber} of ${totalPages}`} />
         </View>
       </Page>

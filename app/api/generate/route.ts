@@ -1,23 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
-import scalerKb from "@/src/lib/scaler-kb.json";
+import novacampKb from "@/src/lib/novacamp-kb.json";
 import { extractJSON } from "@/src/lib/parse-json";
 import type { GeneratedPdf, PdfSection } from "@/src/lib/types";
 export type { GeneratedPdf, PdfSection };
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
-const SYSTEM_PROMPT = `You are creating a personalized post-call document for a prospective Scaler lead. This document will be sent as a PDF on WhatsApp after their call with a BDA. Its job is to build enough trust that the lead takes the entrance test.
+const SYSTEM_PROMPT = `You are creating a personalized post-call document for a prospective NovaCamp lead. This document will be sent as a PDF on WhatsApp after their call with an advisor. Its job is to build enough trust that the lead takes the next step.
 
 You have:
 - The lead's profile
 - Their open questions from the call
-- Scaler's knowledge base (real facts only)
+- NovaCamp's knowledge base (real facts only)
 
 First, classify the lead's persona. Common archetypes include:
 - SKEPTICAL_SWITCHER: Credentialed, ROI-focused, compares alternatives. Tone: peer-to-peer, data-forward, no fluff. Show them numbers.
 - SENIOR_VALIDATOR: Experienced, wants non-trivial value, hates generic. Tone: technical depth, instructor credibility, no hand-holding.
-- ANXIOUS_ASPIRER: Financial fear, family pressure, imposter risk. Tone: warm, reassuring, step-by-step. EMI math, alumni stories from similar backgrounds.
+- ANXIOUS_ASPIRER: Financial fear, family pressure, imposter risk. Tone: warm, reassuring, step-by-step. Payment math, alumni stories from similar backgrounds.
 - CAREER_ACCELERATOR: Already performing well, wants an edge or lateral move. Tone: peer-level, ambitious, outcome-focused.
 - LOST_EXPLORER: Browsing, no clear intent, needs discovery. Tone: open-ended, low-pressure, exploratory.
 
@@ -31,26 +31,26 @@ Then generate the PDF content as JSON with this structure:
   "sections": [
     {
       "title": "Section title addressing their specific question",
-      "content": "2-4 paragraphs answering their question with real Scaler facts from the KB. Be specific. No generic marketing.",
-      "evidence": ["Bullet point evidence items - alumni data, curriculum modules, salary stats"],
-      "source_note": "Where this data comes from - e.g. 'B2K Analytics audit, same agency as IIM-A' or 'Scaler Academy curriculum page'"
+      "content": "2-4 paragraphs answering their question with real NovaCamp facts from the KB. Be specific. No generic marketing.",
+      "evidence": ["Bullet point evidence items - alumni data, curriculum modules, outcomes"],
+      "source_note": "Where this data comes from"
     }
   ],
   "cta": {
     "headline": "Personalized call-to-action headline",
-    "body": "1-2 lines nudging them toward the entrance test, framed for their persona",
-    "test_framing": "How to frame the entrance test for this persona - e.g. for anxious aspirer: 'it determines your batch and scholarship, not whether you get in'"
+    "body": "1-2 lines nudging them toward the next step, framed for their persona",
+    "test_framing": "How to frame the next step for this persona — advisor-facing note only, not shown in PDF"
   },
   "whatsapp_message": "A short 2-3 line WhatsApp covering message to send with the PDF. Personalized, not generic."
 }
 
 Rules:
-- Every claim must come from the Scaler KB provided. If a claim is not in the KB, say 'our team can share specifics on this' instead of fabricating.
+- Every claim must come from the NovaCamp KB provided. If a claim is not in the KB, say 'our team can share specifics on this' instead of fabricating.
 - Each section must address a SPECIFIC question the lead asked, not generic program info.
-- The document tone must match the persona. Rohan's PDF should not read like Meera's.
+- The document tone must match the persona.
 - Keep total content to 2-3 pages worth when rendered.
-- The 'cta.headline' and 'cta.body' fields are shown DIRECTLY to the lead inside the PDF. They must contain ONLY text addressed to the lead — no coaching instructions, no framing advice, no BDA-facing notes. Write them as if the lead is the only reader.
-- The 'test_framing' field is the ONLY place for BDA-facing framing advice (e.g. "frame it as a calibration exercise"). It will NOT appear in the PDF — it is stripped before rendering. Do not duplicate this content in cta.headline or cta.body.
+- The 'cta.headline' and 'cta.body' fields are shown DIRECTLY to the lead inside the PDF. They must contain ONLY text addressed to the lead — no coaching instructions, no framing advice, no advisor-facing notes. Write them as if the lead is the only reader.
+- The 'test_framing' field is the ONLY place for advisor-facing framing advice. It will NOT appear in the PDF — it is stripped before rendering. Do not duplicate this content in cta.headline or cta.body.
 - The 'whatsapp_message' field is sent as a separate covering message on WhatsApp. It is NOT rendered in the PDF. Do not embed it in any section content, evidence bullet, or cta field.
 - Do not put internal instructions, framing notes, or meta-commentary anywhere in the JSON except 'test_framing'.
 
@@ -76,8 +76,8 @@ export async function POST(req: NextRequest) {
 Open Questions from Call:
 ${JSON.stringify(questions ?? [], null, 2)}
 
-Scaler Knowledge Base:
-${JSON.stringify(scalerKb, null, 2)}`;
+NovaCamp Knowledge Base:
+${JSON.stringify(novacampKb, null, 2)}`;
 
     const message = await client.messages.create({
       model: "claude-sonnet-4-6",

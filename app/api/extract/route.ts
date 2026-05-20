@@ -6,7 +6,7 @@ export type { ExtractedQuestion };
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
-const SYSTEM_PROMPT = `You are analyzing a sales call transcript between a BDA (Business Development Associate) at Scaler and a prospective lead. Extract every open question or concern the lead raised that was NOT adequately answered during the call.
+const SYSTEM_PROMPT = `You are analyzing a sales call transcript between an advisor at NovaCamp and a prospective lead. Extract every open question or concern the lead raised that was NOT adequately answered during the call.
 
 For each question, return:
 - question: The lead's actual question/concern in their own words
