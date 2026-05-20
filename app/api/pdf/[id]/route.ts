@@ -12,7 +12,7 @@ export async function GET(_req: NextRequest, ctx: RouteContext<"/api/pdf/[id]">)
   return new Response(new Uint8Array(buffer), {
     headers: {
       "Content-Type": "application/pdf",
-      "Content-Disposition": 'inline; filename="scaler-roadmap.pdf"',
+      "Content-Disposition": 'inline; filename="novacamp-roadmap.pdf"',
       "Cache-Control": "private, max-age=3600",
     },
   });
